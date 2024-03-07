@@ -122,12 +122,6 @@ contains
         class(Cola), intent(inout) :: this_cola
         type(Cliente) :: clienteRetornado
         type(Nodo), pointer :: nodoTemp
-        
-        ! Inicializar clienteRetornado con valores predeterminados o indicativos de "vacio"
-        clienteRetornado%id = -1
-        clienteRetornado%nombre = ""
-        clienteRetornado%img_g = 0
-        clienteRetornado%img_p = 0
     
         ! Verificar si la cola está vacía
         if (associated(this_cola%head)) then

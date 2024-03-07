@@ -97,8 +97,6 @@ contains
                     call listaEspera%insertarCliente(clienteEspera)
 
                     ! Agregando las imagenes cargadas en ventanilla a las colas de impresion
-                    write(*,'(A, I0, A, A)') 'AGREGANDO IMAGENES GRANDES A LA IMPRESION DEL CLIENTE: ', &
-                        nodoActual%dato%id, '-', nodoActual%dato%nombre
                     do i = 1, nodoActual%dato%img_g
                         imagenImp%id_Cliente = nodoActual%dato%id
                         imagenImp%nombre = nodoActual%dato%nombre
@@ -107,8 +105,7 @@ contains
                         call colaImagenG%encolarImpresion(imagenImp)
                     end do
 
-                    write(*,'(A, I0, A, A)') 'AGREGANDO IMAGENES PEQUENAS A LA IMPRESION DEL CLIENTE: ', &
-                    nodoActual%dato%id, '-', nodoActual%dato%nombre
+                    ! Agregando las imagenes cargadas (pequeñas) en ventanilla a las colas de impresion
                     do i = 1, nodoActual%dato%img_p
                         imagenImp%id_Cliente = nodoActual%dato%id
                         imagenImp%nombre = nodoActual%dato%nombre
