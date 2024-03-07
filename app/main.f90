@@ -54,13 +54,6 @@ program inicio
             case (2)
                 print *, ''
                 write(*,'(A, I0, A)') '---------------- PASO ',paso, ' ----------------'
-                print *, "----------------------------------------"
-                print *, "PRODUCCION IMPRESORA GRANDE:"
-                call impresoraGrande%produccion(listaEspera, listAtendidos)
-                print *, "----------------------------------"
-                print *, "PRODUCCION IMPRESORA PEQUENA: "
-                call impresoraSmall%produccion(listaEspera, listAtendidos)
-                print *, "----------------------------------"
                 call milistaVentanilla%siguientePaso(impresoraGrande,impresoraSmall, listaEspera)            
                 ClientesContenido = miColaDeClientes%contenido()
                 if (disponibilidad .and. ClientesContenido) then
@@ -72,7 +65,6 @@ program inicio
                     imagenTemp%img_p = clienteTemp%img_p
                     imagenTemp%img_pTemp = clienteTemp%img_p  
                     imagenTemp%pasoInicial = paso
-                    call milistaVentanilla%llenarPilaImagenes(imagenTemp)
                 end if 
                 disponibilidad = milistaVentanilla%disponibilidad()
                 print *, "----------------------------------------"
