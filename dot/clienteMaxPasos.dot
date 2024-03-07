@@ -1,0 +1,9 @@
+ digraph cliente_maxpasos {
+     rankdir=LR;
+     node [shape=record];
+ "Node Principal" [label="Pedro Sanchez                           "];
+ "Node Ventanilla" [label="Atendido por: \nVentanilla 2"];
+ "Node pasos" [label="Pasos realizados: \n          14 "];
+     "Node Principal" -> "Node Ventanilla" [dir=none];
+     "Node Ventanilla" -> "Node pasos" [dir=none];
+ }

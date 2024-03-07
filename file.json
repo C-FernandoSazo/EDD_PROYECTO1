@@ -1,0 +1,21 @@
+[
+    {
+      "id": "1",
+      "nombre": "Andres Lopez",
+      "img_g": "3",
+      "img_p": "2"
+    },
+    {
+      "id": "2",
+      "nombre": "Juan Perez",
+      "img_g": "3",
+      "img_p": "0"
+    },
+    {
+      "id": "3",
+      "nombre": "Luis Higueros",
+      "img_g": "2",
+      "img_p": "1"
+    }
+]
+  

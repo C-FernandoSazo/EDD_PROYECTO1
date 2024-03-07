@@ -1,0 +1,19 @@
+name = "proyecto"
+version = "0.1.0"
+license = "license"
+author = "C-FernandoSazo"
+maintainer = "122990117+C-FernandoSazo@users.noreply.github.com"
+copyright = "Copyright 2024, C-FernandoSazo"
+[build]
+auto-executables = true
+auto-tests = true
+auto-examples = true
+module-naming = false
+[install]
+library = true
+[fortran]
+implicit-typing = false
+implicit-external = false
+source-form = "free"
+[dependencies]
+json-fortran = {git = "https://github.com/jacobwilliams/json-fortran"}

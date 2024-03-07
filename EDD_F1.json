@@ -1,0 +1,62 @@
+[
+  {
+    "nombre": "Calificacion1",
+    "id": "1",
+    "img_g": "1",
+    "img_p": "3"
+  },
+  {
+    "nombre": "Maria Garcia",
+    "id": "2",
+    "img_g": "2",
+    "img_p": "2"
+  },
+  {
+    "nombre": "Carlos Lopez",
+    "id": "3",
+    "img_g": "1",
+    "img_p": "1"
+  },
+  {
+    "nombre": "Laura Rodriguez",
+    "id": "4",
+    "img_g": "1",
+    "img_p": "3"
+  },
+  {
+    "nombre": "Pedro Sanchez",
+    "id": "5",
+    "img_g": "2",
+    "img_p": "2"
+  },
+  {
+    "nombre": "Ana Martinez",
+    "id": "6",
+    "img_g": "1",
+    "img_p": "1"
+  },
+  {
+    "nombre": "Diego Fernandez",
+    "id": "7",
+    "img_g": "3",
+    "img_p": "1"
+  },
+  {
+    "nombre": "Sofia Ramirez",
+    "id": "8",
+    "img_g": "2",
+    "img_p": "2"
+  },
+  {
+    "nombre": "Elena Gonzalez",
+    "id": "9",
+    "img_g": "1",
+    "img_p": "1"
+  },
+  {
+    "nombre": "Antonio Jimenez",
+    "id": "10",
+    "img_g": "1",
+    "img_p": "3"
+  }
+]
