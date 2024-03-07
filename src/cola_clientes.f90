@@ -24,7 +24,6 @@ module cola_clientes
         procedure :: mostrar_cola
         procedure :: pop
         procedure :: contenido
-        procedure :: agregarRandom
         procedure :: graficar_cola
     end type Cola
 
@@ -148,52 +147,6 @@ contains
     
         content = associated(this_cola%head)
     end function contenido
-    
-    subroutine agregarRandom(this_cola)
-        class(Cola), intent(inout) :: this_cola
-        integer :: nClientes, i, nImagenes
-        type(Cliente) :: clienteTemp
-        integer :: idxNombre, idxApellido
-        real :: rNum
-        character(len=7), dimension(10) :: nombres = [ &
-            "Roberto", "Marcelo", "Gabriel", "Andress", "Ricardo", &
-            "Daniel ", "Martinn", "Maurice", "Alfredo", "Eduardo" &
-        ]
-
-        character(len=5), dimension(10) :: apellidos = [ &
-            "Ruiza", "Perez", "Sotos", "Vegas", "Moran", &
-            "Leeon", "Velas", "Suaro", "Costa", "Prado" &
-        ]
-    
-        ! Inicializar el generador de números aleatorios
-        call random_seed()
-    
-        ! Generar un número aleatorio de clientes para agregar
-        call random_number(rNum)
-        nClientes = int(rNum * 4.0) 
-    
-        do i = 1, nClientes
-            ! Generar un nombre aleatorio
-            call random_number(rNum)
-            idxNombre = int(rNum * size(nombres)) + 1
-            call random_number(rNum)
-            idxApellido = int(rNum * size(apellidos)) + 1
-            clienteTemp%nombre = trim(nombres(idxNombre)) // " " // trim(apellidos(idxApellido))
-    
-            ! Generar un ID aleatorio de 4 dígitos
-            call random_number(rNum)
-            clienteTemp%id = 1000 + int(rNum * 9000)
-    
-            ! Generar cantidad aleatoria de imágenes
-            call random_number(rNum)
-            clienteTemp%img_g = int(rNum * 5.0)
-            call random_number(rNum)
-            clienteTemp%img_p = int(rNum * 5.0)
-
-            call this_cola%push(clienteTemp)
-        end do
-
-    end subroutine agregarRandom
 
     subroutine graficar_cola(this_cola, filename)
         class(Cola), intent(in) :: this_cola

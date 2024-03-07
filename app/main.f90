@@ -53,7 +53,6 @@ program inicio
                         end select
             case (2)
                 print *, ''
-                call miColaDeClientes%agregarRandom()
                 write(*,'(A, I0, A)') '---------------- PASO ',paso, ' ----------------'
                 print *, "----------------------------------------"
                 print *, "PRODUCCION IMPRESORA GRANDE:"
